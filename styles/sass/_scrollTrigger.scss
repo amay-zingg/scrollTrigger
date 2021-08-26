@@ -1,18 +1,8 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.container {
-  max-height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
 section {
+  position: relative;
+  width: 100%;
   height: 100vh;
+  overflow: hidden;
   @include flexbox(
     $placeItems: center,
     $placeContent: center,
@@ -21,28 +11,105 @@ section {
   );
 }
 
-.section-container {
-  margin: 1em;
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #fff, transparent);
+  z-index: 10;
 }
 
-.blue {
-  background-color: aqua;
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
-.panel {
-  scroll-snap-align: start;
-  height: 100vh;
+section img#man {
+  transform-origin: bottom;
 }
 
-.red {
-  background-color: #cf3535;
-  background-image: none;
+#text {
+  position: relative;
+  font-size: 11vh;
+  color: #fff;
+  font-family: $headingFont2;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  text-shadow: $black 2px 2px 2px;
 }
 
-.panel p {
-  font-size: 32px;
+.sec {
+  position: relative;
+  padding: 100px;
 }
 
-.orange {
-  background-color: orange;
+.sec h2 {
+  font-size: 3em;
+  font-family: $headingFont2;
+  margin-bottom: 10px;
+  color: #20496a;
+  text-shadow: none;
 }
+
+.sec p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #20496a;
+}
+
+// html,
+// body {
+//   margin: 0;
+//   padding: 0;
+//   overflow: hidden;
+// }
+
+// .container {
+//   max-height: 100vh;
+//   overflow-y: scroll;
+//   scroll-snap-type: y mandatory;
+// }
+
+// section {
+//   height: 100vh;
+//   @include flexbox(
+//     $placeItems: center,
+//     $placeContent: center,
+//     $direction: column,
+//     $wrap: wrap
+//   );
+// }
+
+// .section-container {
+//   margin: 1em;
+// }
+
+// .blue {
+//   background-color: aqua;
+// }
+
+// .panel {
+//   scroll-snap-align: start;
+//   height: 100vh;
+// }
+
+// .red {
+//   background-color: #cf3535;
+//   background-image: none;
+// }
+
+// .panel p {
+//   font-size: 32px;
+// }
+
+// .orange {
+//   background-color: orange;
+// }
