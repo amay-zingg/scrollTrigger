@@ -1,10 +1,5 @@
 https: gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.defaults({
-  // toggleActions: "restart pause resume pause",
-  // scroller: ".container",
-});
-
 gsap.to(["#bg"], {
   scrollTrigger: {
     scrub: 1,
@@ -53,6 +48,18 @@ gsap.to(["#text"], {
   },
   y: 600,
 });
+
+// Below and setting scrub: 1 as a default didn't work
+// gsap.to(["#bg", "#man", "#mountain_left", "#mountain_right", "#clouds_1", "#clouds_2", "#text"], {
+//    scrollTrigger: {
+//     scrub: 1,
+//   },
+// });
+
+// ScrollTrigger.defaults({
+//   scrub: 1,
+// });
+
 
 
 // https: gsap.registerPlugin(ScrollTrigger);
