@@ -244,15 +244,15 @@ figcaption {
   padding: 0;
 }
 
-h1,
-h2,
-h3 {
-  @include fontSize(4rem);
-  font-family: $headingFont;
-  padding: 20px 0;
-  text-shadow: 1px 1px 1px $secondary;
-  text-align: center;
-}
+// h1,
+// h2,
+// h3 {
+//   @include fontSize(4rem);
+//   font-family: $tutFont;
+//   padding: 20px 0;
+//   text-shadow: 1px 1px 1px $secondary;
+//   text-align: center;
+// }
 
 p,
 a {
@@ -265,11 +265,11 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:active {
-  color: $secondary;
-  text-shadow: 1px 1px 1px $third, 1px 1px 5px $third;
-}
+// a:hover,
+// a:active {
+//   color: $primary;
+//   // text-shadow: 1px 1px 1px $third, 1px 1px 5px $third;
+// }
 
 p.link {
   text-align: center;
@@ -278,7 +278,7 @@ p.link {
 
 // // * * * * INPUTS
 input {
-  font-family: $bodyFont;
+  font-family: $tutFont;
   color: $black;
 }
 
@@ -292,7 +292,7 @@ textarea:focus-within {
 
 // // * * * * BLOCKS
 body {
-  font-family: $bodyFont;
+  font-family: $tutFont;
   color: $primary;
   font-size: 2rem;
   text-align: center;

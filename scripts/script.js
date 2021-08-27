@@ -1,94 +1,76 @@
 https: gsap.registerPlugin(ScrollTrigger);
+// * * * * Forest Parallax
+let text = document.getElementById("text");
+let bird1 = document.getElementById("bird1");
+let bird2 = document.getElementById("bird2");
+let btn = document.getElementById("btn");
+let rocks = document.getElementById("rocks");
+let water = document.getElementById("water");
+let forest = document.getElementById("forest");
+let header = document.getElementById("header");
 
-gsap.to(["#bg"], {
-  scrollTrigger: {
-    scrub: 1,
-  },
-  scale: 1.5,
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+
+  text.style.top = 50 + value * -0.5 + "%";
+  bird1.style.top = value * -1.5 + "px";
+  bird1.style.left = value * 2 + "px";
+  bird2.style.top = value * -1.5 + "px";
+  bird2.style.left = value * -5 + "px";
+
+  btn.style.marginTop = value * 1.5 + "px";
+  rocks.style.top = value * -0.12 + "px";
+  forest.style.top = value * 0.25 + "px";
+
+  header.style.top = value * 0.5 + "px";
 });
 
-gsap.to(["#man"], {
-  scrollTrigger: {
-    scrub: 1,
-  },
-  scale: 0.5,
-});
-
-gsap.to(["#mountain_left"], {
-  scrollTrigger: {
-    scrub: 1,
-  },
-  x: -500,
-});
-
-gsap.to(["#mountain_right"], {
-  scrollTrigger: {
-    scrub: 1,
-  },
-  x: 500,
-});
-
-gsap.to(["#clouds_1"], {
-  scrollTrigger: {
-    scrub: 1,
-  },
-  x: 200,
-});
-
-gsap.to(["#clouds_2"], {
-  scrollTrigger: {
-    scrub: 1,
-  },
-  x: -200,
-});
-
-gsap.to(["#text"], {
-  scrollTrigger: {
-    scrub: 1,
-  },
-  y: 600,
-});
-
-// Below and setting scrub: 1 as a default didn't work
-// gsap.to(["#bg", "#man", "#mountain_left", "#mountain_right", "#clouds_1", "#clouds_2", "#text"], {
-//    scrollTrigger: {
+// * * * * Mountains Parallax Animation
+// gsap.to(["#bg"], {
+//   scrollTrigger: {
 //     scrub: 1,
 //   },
+//   scale: 1.5,
 // });
 
-// ScrollTrigger.defaults({
-//   scrub: 1,
-// });
-
-
-
-// https: gsap.registerPlugin(ScrollTrigger);
-
-// ScrollTrigger.defaults({
-//   toggleActions: "restart pause resume pause",
-//   scroller: ".container",
-// });
-
-// gsap.to(".orange p", {
-//   scrollTrigger: ".orange", 
-//   duration: 2, 
-//   rotation: 360,
-// });
-
-// gsap.to(".red", {
+// gsap.to(["#man"], {
 //   scrollTrigger: {
-//     trigger: ".red",
-//     toggleActions: "restart pause reverse pause"
-//   }, 
-//   duration: 1, 
-//   backgroundColor: "#FFA500", 
-//   ease: "none",
+//     scrub: 1,
+//   },
+//   scale: 0.5,
 // });
 
-// gsap.to(".yoyo p", {
-//   scrollTrigger: ".yoyo", 
-//   scale: 2, 
-//   repeat: -1, 
-//   yoyo: true, 
-//   ease: "power2"
+// gsap.to(["#mountain_left"], {
+//   scrollTrigger: {
+//     scrub: 1,
+//   },
+//   x: -500,
+// });
+
+// gsap.to(["#mountain_right"], {
+//   scrollTrigger: {
+//     scrub: 1,
+//   },
+//   x: 500,
+// });
+
+// gsap.to(["#clouds_1"], {
+//   scrollTrigger: {
+//     scrub: 1,
+//   },
+//   x: 200,
+// });
+
+// gsap.to(["#clouds_2"], {
+//   scrollTrigger: {
+//     scrub: 1,
+//   },
+//   x: -200,
+// });
+
+// gsap.to(["#text"], {
+//   scrollTrigger: {
+//     scrub: 1,
+//   },
+//   y: 600,
 // });

@@ -1,14 +1,52 @@
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  @include flexbox($placeItems: center, $placeContent: space-between);
+  z-index: 10;
+}
+
+#header .logo {
+  font-family: $tutFont;
+  color: #094b65;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#header ul {
+  @include flexbox(
+    $placeItems: center,
+    $placeContent: center,
+    $direction: row,
+    $wrap: wrap
+  );
+}
+
+#header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+#header ul li a {
+  padding: 6px 15px;
+  color: #094b65;
+  border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  color: #fff;
+  background: #094b65;
+}
+
 section {
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  @include flexbox(
-    $placeItems: center,
-    $placeContent: center,
-    $direction: column,
-    $wrap: wrap
-  );
+  @include flexbox($placeItems: center, $placeContent: center);
 }
 
 section::before {
@@ -17,8 +55,8 @@ section::before {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
-  background: linear-gradient(to top, #fff, transparent);
+  height: 100px;
+  background: linear-gradient(to top, #094b65, transparent);
   z-index: 10;
 }
 
@@ -32,54 +70,59 @@ section img {
   pointer-events: none;
 }
 
-section img#man {
-  transform-origin: bottom;
+section #text {
+  position: absolute;
+  color: #094b65;
+  font-size: 10vw;
+  text-align: center;
+  line-height: 0.55em;
+  font-family: $tutFont2;
+  transform: translateY(-220%);
 }
 
-#text {
-  position: relative;
-  font-size: 11vh;
-  color: #fff;
-  font-family: $headingFont2;
-  margin-bottom: 1.5em;
-  text-transform: uppercase;
-  text-shadow: $black 2px 2px 2px;
+section #text span {
+  font-size: 0.2em;
+  letter-spacing: 2px;
+  font-weight: 400px;
+  font-family: $tutFont;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  background: #fff;
+  color: #094b65;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  transform: translateY(100px);
 }
 
 .sec {
   position: relative;
   padding: 100px;
+  background: #094b65;
 }
 
 .sec h2 {
-  font-size: 3em;
-  font-family: $headingFont2;
+  font-size: 3.5em;
+  color: #fff;
   margin-bottom: 10px;
-  color: #20496a;
-  text-shadow: none;
 }
 
 .sec p {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  color: #20496a;
+  font-size: 1em;
+  color: #fff;
 }
 
-// html,
-// body {
-//   margin: 0;
-//   padding: 0;
-//   overflow: hidden;
-// }
-
-// .container {
-//   max-height: 100vh;
-//   overflow-y: scroll;
-//   scroll-snap-type: y mandatory;
-// }
-
+/* * * * * * * * * * * * * * MOUNTAIN PARALLAX * * * * * * * * * * * * * * */
 // section {
+//   position: relative;
+//   width: 100%;
 //   height: 100vh;
+//   overflow: hidden;
 //   @include flexbox(
 //     $placeItems: center,
 //     $placeContent: center,
@@ -88,28 +131,56 @@ section img#man {
 //   );
 // }
 
-// .section-container {
-//   margin: 1em;
+// section::before {
+//   content: "";
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 200px;
+//   background: linear-gradient(to top, #fff, transparent);
+//   z-index: 10;
 // }
 
-// .blue {
-//   background-color: aqua;
+// section img {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   pointer-events: none;
 // }
 
-// .panel {
-//   scroll-snap-align: start;
-//   height: 100vh;
+// section img#man {
+//   transform-origin: bottom;
 // }
 
-// .red {
-//   background-color: #cf3535;
-//   background-image: none;
+// #text {
+//   position: relative;
+//   font-size: 11vh;
+//   color: #fff;
+//   font-family: $headingFont2;
+//   margin-bottom: 1.5em;
+//   text-transform: uppercase;
+//   text-shadow: $black 2px 2px 2px;
 // }
 
-// .panel p {
-//   font-size: 32px;
+// .sec {
+//   position: relative;
+//   padding: 100px;
 // }
 
-// .orange {
-//   background-color: orange;
+// .sec h2 {
+//   font-size: 3em;
+//   font-family: $headingFont2;
+//   margin-bottom: 10px;
+//   color: #20496a;
+//   text-shadow: none;
+// }
+
+// .sec p {
+//   font-size: 1.2em;
+//   margin-bottom: 10px;
+//   color: #20496a;
 // }

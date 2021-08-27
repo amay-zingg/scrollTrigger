@@ -294,18 +294,6 @@ figcaption {
   padding: 0;
 }
 
-h1,
-h2,
-h3 {
-  font-size: 4rem;
-  font-weight: 400;
-  line-height: 6rem;
-  font-family: "Chewy", cursive;
-  padding: 20px 0;
-  text-shadow: 1px 1px 1px firebrick;
-  text-align: center;
-}
-
 p,
 a {
   color: #0c0a0a;
@@ -315,19 +303,13 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:active {
-  color: firebrick;
-  text-shadow: 1px 1px 1px moccasin, 1px 1px 5px moccasin;
-}
-
 p.link {
   text-align: center;
   margin-bottom: 1em;
 }
 
 input {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #0c0a0a;
 }
 
@@ -340,29 +322,97 @@ textarea:focus-within {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: maroon;
   font-size: 2rem;
   text-align: center;
 }
 
 /* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
-section {
-  position: relative;
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  padding: 30px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: space-between;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  z-index: 10;
+}
+
+#header .logo {
+  font-family: "Poppins", sans-serif;
+  color: #094b65;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   place-content: center;
   place-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+#header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+#header ul li a {
+  padding: 6px 15px;
+  color: #094b65;
+  border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  color: #fff;
+  background: #094b65;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-flex: 0;
@@ -376,9 +426,9 @@ section::before {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(transparent));
-  background: linear-gradient(to top, #fff, transparent);
+  height: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#094b65), to(transparent));
+  background: linear-gradient(to top, #094b65, transparent);
   z-index: 10;
 }
 
@@ -393,36 +443,53 @@ section img {
   pointer-events: none;
 }
 
-section img#man {
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+section #text {
+  position: absolute;
+  color: #094b65;
+  font-size: 10vw;
+  text-align: center;
+  line-height: 0.55em;
+  font-family: "Rancho", cursive;
+  -webkit-transform: translateY(-220%);
+          transform: translateY(-220%);
 }
 
-#text {
-  position: relative;
-  font-size: 11vh;
-  color: #fff;
-  font-family: "Kreon", cursive;
-  margin-bottom: 1.5em;
-  text-transform: uppercase;
-  text-shadow: #0c0a0a 2px 2px 2px;
+section #text span {
+  font-size: 0.2em;
+  letter-spacing: 2px;
+  font-weight: 400px;
+  font-family: "Poppins", sans-serif;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  background: #fff;
+  color: #094b65;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .sec {
   position: relative;
   padding: 100px;
+  background: #094b65;
 }
 
 .sec h2 {
-  font-size: 3em;
-  font-family: "Kreon", cursive;
+  font-size: 3.5em;
+  color: #fff;
   margin-bottom: 10px;
-  color: #20496a;
-  text-shadow: none;
 }
 
 .sec p {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  color: #20496a;
+  font-size: 1em;
+  color: #fff;
 }
+
+/* * * * * * * * * * * * * * MOUNTAIN PARALLAX * * * * * * * * * * * * * * */
