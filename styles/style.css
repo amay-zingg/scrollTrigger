@@ -554,10 +554,10 @@ body {
 
 .mountain #text {
   position: relative;
-  font-size: 11vh;
+  font-size: 8vh;
   color: #fff;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   text-transform: uppercase;
   text-shadow: #0c0a0a 2px 2px 2px;
 }
