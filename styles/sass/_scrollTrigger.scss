@@ -1,8 +1,19 @@
 /* * * * GLOBAL * * * */
 .bird-box {
+  position: absolute;
+  top: 0;
+  left: 0;
   max-width: 1024px;
   height: 100%;
   overflow: hidden;
+}
+
+.forest-image,
+.rocks-and-water {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* * * * * * * * * * * * * * FOREST PARALLAX * * * * * * * * * * * * * * */
