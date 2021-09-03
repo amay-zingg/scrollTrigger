@@ -276,6 +276,32 @@ html {
 }
 
 /* * * * * * * * * * * * * * AFTER NORMALIZE * * * * * * * * * * * * * * */
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+main {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  place-content: center;
+  place-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
 ul,
 li {
   list-style: none;
@@ -329,24 +355,14 @@ body {
 }
 
 /* * * * * * * * * * * * * * MEDIA QUERIES * * * * * * * * * * * * * * */
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
 /* * * * GLOBAL * * * */
-.bird-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1024px;
-  height: 100%;
-  overflow: hidden;
-}
-
-.forest-image,
-.rocks-and-water {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
 /* * * * * * * * * * * * * * FOREST PARALLAX * * * * * * * * * * * * * * */
 .forest #header {
   position: absolute;
@@ -511,6 +527,29 @@ body {
   color: #fff;
 }
 
+/* * * * MEDIA QUERIES FOREST * * * */
+@media only screen and (max-width: 500px) {
+  .header {
+    background: #094b65;
+    color: #fff;
+    padding: 15px 20px;
+  }
+  .forest #header .logo {
+    font-size: 1.1em;
+  }
+  .forest #header {
+    padding: 10px 20px;
+  }
+  .forest section #text {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  .forest section #text {
+    font-size: 20vw;
+  }
+}
+
+/* * * * * * * * * * * * * * FOREST END * * * * * * * * * * * * * * */
 /* * * * * * * * * * * * * * MOUNTAIN PARALLAX * * * * * * * * * * * * * * */
 .mountain section {
   position: relative;

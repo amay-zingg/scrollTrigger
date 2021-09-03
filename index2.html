@@ -34,16 +34,10 @@
     />
   </head>
   <body>
-    <div class="bird-box">
-      <img src="./assets/Forest/bird1.png" alt="Bird" id="bird1" />
-      <img src="./assets/Forest/bird2.png" alt="Bird" id="bird2" />
-    </div>
-    
-    <div class="forest-image">
-      <img src="./assets/Forest/forest.png" alt="Forest" id="forest" />
-    </div>
-    <div class="forest">
-     
+   
+    <div class="wrapper">
+    <main class="forest">
+     <!-- This is a wrapper ^ above -->
       <header id="header">
         <a href="#" class="logo">Forest</a>
         <ul>
@@ -56,10 +50,26 @@
 
       <section class="container">
         <h2 id="text"><span>It's time for a new </span><br />Adventure</h2>
-        
-        <a href="#" id="btn">Explore</a>
+
+        <div class="forest-image">
+          <img src="./assets/Forest/forest.png" alt="Forest" id="forest" />
+        </div>
+
+        <div class="rocks-and-water">
+          <img src="./assets/Forest/rocks.png" alt="Rocks" id="rocks" />
+          <img src="./assets/Forest/water.png" alt="Water" id="water" />
+        </div>
+
+        <div class="bird-box">
+          <img src="./assets/Forest/bird1.png" alt="Bird" id="bird1" />
+          <img src="./assets/Forest/bird2.png" alt="Bird" id="bird2" />
+        </div>
+
+          <a href="#" id="btn">Explore</a>
     
       </section>
+
+
       <div class="sec">
         <h2>Note to self: fix assets, then code</h2>
         <h2>Parallax is Awesome</h2>
@@ -85,12 +95,10 @@
           <a href="index2.html">Forest</a>
         </p>
       </div>
-    </div>
-    <div class="rocks-and-water">
-          <img src="./assets/Forest/rocks.png" alt="Rocks" id="rocks" />
-          <img src="./assets/Forest/water.png" alt="Water" id="water" />
-    </div>
+    </main>
+ 
     <!-- END OF FOREST -->
+    </div>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>

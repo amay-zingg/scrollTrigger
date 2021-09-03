@@ -226,6 +226,23 @@ html {
 
 /* * * * * * * * * * * * * * AFTER NORMALIZE * * * * * * * * * * * * * * */
 // * * * * PARTS
+// MOBILE FIRST SIZING
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+main {
+  width: 100%;
+  @include flexbox(
+    $placeItems: center,
+    $placeContent: center,
+    $direction: column,
+    $wrap: wrap
+  );
+}
+
 ul,
 li {
   list-style: none;
@@ -310,12 +327,12 @@ body {
 //   }
 // }
 
-// @media only screen and (min-width: 900px) {
-//   .wrapper {
-//     max-width: 1024px;
-//     margin: 0 auto;
-//   }
-// }
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
 
 // @media only screen and (max-width: 800px) {
 //   .section-content {

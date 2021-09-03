@@ -1,20 +1,21 @@
 /* * * * GLOBAL * * * */
-.bird-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1024px;
-  height: 100%;
-  overflow: hidden;
-}
+// .bird-box {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 1024px;
+//   height: 100%;
+//   overflow: hidden;
+// }
 
-.forest-image,
-.rocks-and-water {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+// Revision below
+// .forest-image,
+// .rocks-and-water {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+// }
 
 /* * * * * * * * * * * * * * FOREST PARALLAX * * * * * * * * * * * * * * */
 .forest #header {
@@ -135,6 +136,33 @@
   font-size: 1em;
   color: #fff;
 }
+
+/* * * * MEDIA QUERIES FOREST * * * */
+@media only screen and (max-width: 500px) {
+  // #094b65 - blue
+
+  .header {
+    background: #094b65;
+    color: #fff;
+    padding: 15px 20px;
+  }
+
+  .forest #header .logo {
+    font-size: 1.1em;
+  }
+  .forest #header {
+    padding: 10px 20px;
+  }
+
+  .forest section #text {
+    transform: translateY(10%);
+  }
+
+  .forest section #text {
+    font-size: 20vw;
+  }
+}
+/* * * * * * * * * * * * * * FOREST END * * * * * * * * * * * * * * */
 
 /* * * * * * * * * * * * * * MOUNTAIN PARALLAX * * * * * * * * * * * * * * */
 .mountain section {
