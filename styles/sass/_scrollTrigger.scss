@@ -138,8 +138,13 @@
 }
 
 /* * * * MEDIA QUERIES FOREST * * * */
-@media only screen and (max-width: 500px) {
-  // #094b65 - blue
+@media only screen and (max-width: 800px) {
+  .forest section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    @include flexbox($placeItems: center, $placeContent: center);
+  }
 
   .header {
     background: #094b65;
@@ -161,7 +166,37 @@
   .forest section #text {
     font-size: 20vw;
   }
+
+  // writing part
+  .forest .sec h2 {
+    font-size: 1.5em;
+  }
 }
+
+// @media only screen and (max-width: 600px) {
+// #094b65 - blue
+
+// .header {
+//   background: #094b65;
+//   color: #fff;
+//   padding: 15px 20px;
+// }
+
+// .forest #header .logo {
+//   font-size: 1.1em;
+// }
+// .forest #header {
+//   padding: 10px 20px;
+// }
+
+// .forest section #text {
+//   transform: translateY(10%);
+// }
+
+// .forest section #text {
+//   font-size: 20vw;
+// }
+// }
 /* * * * * * * * * * * * * * FOREST END * * * * * * * * * * * * * * */
 
 /* * * * * * * * * * * * * * MOUNTAIN PARALLAX * * * * * * * * * * * * * * */

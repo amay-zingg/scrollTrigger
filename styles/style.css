@@ -277,9 +277,9 @@ html {
 
 /* * * * * * * * * * * * * * AFTER NORMALIZE * * * * * * * * * * * * * * */
 .wrapper {
-  width: 90%;
+  width: 98%;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 main {
@@ -528,7 +528,28 @@ body {
 }
 
 /* * * * MEDIA QUERIES FOREST * * * */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
+  .forest section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    place-content: center;
+    place-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
   .header {
     background: #094b65;
     color: #fff;
@@ -546,6 +567,9 @@ body {
   }
   .forest section #text {
     font-size: 20vw;
+  }
+  .forest .sec h2 {
+    font-size: 1.5em;
   }
 }
 

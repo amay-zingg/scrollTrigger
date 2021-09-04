@@ -227,10 +227,15 @@ html {
 /* * * * * * * * * * * * * * AFTER NORMALIZE * * * * * * * * * * * * * * */
 // * * * * PARTS
 // MOBILE FIRST SIZING
+// .wrapper {
+//   width: 90%;
+//   margin: 0 auto;
+//   padding: 1em;
+// }
 .wrapper {
-  width: 90%;
+  width: 98%;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 main {
