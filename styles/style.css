@@ -280,6 +280,7 @@ html {
   width: 98%;
   margin: 0 auto;
   padding: 0.5em;
+  overflow: hidden;
 }
 
 main {
@@ -566,7 +567,9 @@ body {
             transform: translateY(10%);
   }
   .forest section #text {
-    font-size: 20vw;
+    font-size: 13vw;
+    -webkit-transform: translateY(-220%);
+            transform: translateY(-220%);
   }
   .forest .sec h2 {
     font-size: 1.5em;
