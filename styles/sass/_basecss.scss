@@ -233,9 +233,9 @@ html {
 //   padding: 1em;
 // }
 .wrapper {
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0.5em;
+  padding: 0 0.5em;
   overflow: hidden;
 }
 
@@ -335,7 +335,8 @@ body {
 
 @media only screen and (min-width: 900px) {
   .wrapper {
-    max-width: 1024px;
+    // max-width: 1024px;
+    width: 98vw;
     margin: 0 auto;
   }
 }
